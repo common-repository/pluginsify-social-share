@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "toptal-social";
+  src: url("../fonts/toptal-social.eot?10339217");
+  src: url("../fonts/toptal-social.eot?10339217#iefix") format("embedded-opentype"), url("../fonts/toptal-social.woff?10339217") format("woff"), url("../fonts/toptal-social.ttf?10339217") format("truetype"), url("../fonts/toptal-social.svg?10339217#toptal-social") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.tpl-setting-page .form-table {
+  background-color: #fff;
+  margin-top: 30px;
+}
+.tpl-setting-page .form-table tr {
+  border-bottom: 1px solid #eee;
+}
+.tpl-setting-page .form-table tr th {
+  padding: 20px 10px 20px 20px;
+}
+.tpl-setting-page .form-table tr .tpl-field-post_type_checkbox label,
+.tpl-setting-page .form-table tr .tpl-field-checkbox label,
+.tpl-setting-page .form-table tr .tpl-field-wrapper label,
+.tpl-setting-page .form-table tr .tpl-field-readio_button label {
+  margin-right: 15px !important;
+}
+.tpl-setting-page .form-table tr .plugin-drag_drop .item {
+  cursor: grab;
+}
+.tpl-setting-page .form-table tr .plugin-drag_drop .item.ui-sortable-helper {
+  cursor: grabbing;
+}
+
+/*# sourceMappingURL=admin.css.map */

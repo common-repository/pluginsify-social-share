@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'toptal-social';
+    src: url('../fonts/toptal-social.eot?10339217');
+    src: url('../fonts/toptal-social.eot?10339217#iefix') format('embedded-opentype'),
+         url('../fonts/toptal-social.woff?10339217') format('woff'),
+         url('../fonts/toptal-social.ttf?10339217') format('truetype'),
+         url('../fonts/toptal-social.svg?10339217#toptal-social') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+   
+   
+.tpl-icon {
+  font-family: "toptal-social";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+
+  line-height: 1em;
+
+  margin-left: .2em;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.tpl-social-share-bar {
+    display: flex;
+    clear: both;
+    align-items: center;
+    font-weight: normal;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    line-height: 1em;
+    font-size: 16px;
+
+    ul {
+        margin: 0;
+        padding: 0 0 0 10px;
+        display: inline-block;
+
+        li {
+            list-style: none;
+            display: inline;
+            border: none !important;
+            float: left;
+            margin: 0 3px;
+            a {
+                display: block;
+                text-decoration: none !important;
+                box-shadow: none !important;
+                border: none !important;
+                text-shadow: none !important;
+                line-height: 1em;
+                outline: none !important;
+                transition: all .2s;
+                &:hover {
+                    text-decoration: none;
+                    transform: scale(1.2, 1.2);
+                }
+            }
+        }
+    }
+
+    &.icons-size-small,
+    &.icons-size-small ul li a {
+        font-size: 18px;
+    }
+
+    &.icons-size-medium,
+    &.icons-size-medium ul li a {
+        font-size: 24px;
+    }
+
+    &.icons-size-large,
+    &.icons-size-large ul li a {
+        font-size: 30px;
+    }
+}
+
+.thumb-social-wrap {
+    position: relative;
+
+    .tpl-social-share-bar {
+        margin: 0;
+        position: absolute;
+        z-index: 9999;
+        left: 50%;
+        bottom: 30px;
+        transform: translate(-50%, 0);
+        background: rgba(0,0,0,0.7);
+        color: #fff;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, .5);
+    }
+}
+
+.tpl-socail-fl {
+    position: fixed;
+    transform: translate(0, -50%);
+    top: 50%;
+    left: 0;
+    z-index: 99999;
+
+    .toggle-icon {
+        width: 20px;
+        height: 20px;
+        display: block;
+        background: #000;
+        border-radius: 0 5px 5px 0;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        position: relative;
+        opacity: .4;
+        transition: all .2s;
+        cursor: pointer;
+        top: 2px;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:before {
+            content: '−';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &.hide-bar {
+        .toggle-icon { 
+            &:before {
+                content: '+'; 
+            }
+            
+        }
+        .tpl-social-share-bar {
+            transform: translate(-100%, 0);
+        }
+    }
+
+    .tpl-social-share-bar {
+        margin: 0;
+        display: inline-block;
+        text-align: center;
+        background: #000;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, .5);
+        border-left: none;
+        transition: all .5s;
+
+
+        .tpl-share-label {
+            font-size: 10px !important;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        ul {
+            display: block;
+            line-height: 0;
+            padding: 5px;
+        }
+        li {
+            float: none;
+            margin: 10px 0;
+            display: block;
+        }
+    }
+}
+
+// fixing for twentytwenty theme
+body.theme-twentytwenty .entry-content > .tpl-social-share-bar {
+    margin-top: 30px !important;
+}
